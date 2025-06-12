@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("kilkellyj_a4")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49bbca8b5dea74c1175b2a1b61a5e841639b3c64")]
 [assembly: System.Reflection.AssemblyProductAttribute("kilkellyj_a4")]
 [assembly: System.Reflection.AssemblyTitleAttribute("kilkellyj_a4")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

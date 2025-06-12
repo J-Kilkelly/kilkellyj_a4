@@ -1,14 +1,14 @@
 public class Book
 {
-    string Title { get; set; }
-    string Author { get; set; }
-    bool IsCheckedOut { get; set; } = false;
+    public string Title { get; set; }
+    public string Author { get; set; }
+    public bool IsCheckedOut { get; set; } = false;
 
-    public Book(string title, string author, bool IsCheckedOut)
+    public Book(string title, string author, bool isCheckedOut)
     {
         Title = title;
         Author = author;
-        this.IsCheckedOut = IsCheckedOut;
+        IsCheckedOut = isCheckedOut;
     }
 
     public void CheckOut()
@@ -19,6 +19,5 @@ public class Book
     public void CheckIn()
     {
         IsCheckedOut = false;
-    }
-    
+    } 
 }
