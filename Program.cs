@@ -17,6 +17,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        
+        UserMenu.DisplayMenu();
     }
 }

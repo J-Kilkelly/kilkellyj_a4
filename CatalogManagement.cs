@@ -17,6 +17,6 @@ public static class LibraryCatalog
 
     public static void CheckInBook(string title)
     {
-        
+
     }
 }
