@@ -22,8 +22,8 @@ public class UserMenu : Book
     6. Exit";
 
     public static menuChoices UserSelection { get; set; } = menuChoices.AddBook;
-    public static string Title { get; set; } = "";
-    public static string Author { get; set; } = "";
+    //public static string Title { get; set; } = "";
+    //public static string Author { get; set; } = "";
 
     public UserMenu(string title, string author, bool isCheckedOut = false) : base(title, author, isCheckedOut)
     {
@@ -45,7 +45,7 @@ public class UserMenu : Book
             }
             else
             {
-                Console.WriteLine("Enter your selection as 1, 2, 3, 4, or 5.");
+                Console.WriteLine("Enter your selection as 1, 2, 3, 4, 5, or 6.");
                 Console.WriteLine(mainMenuText);
             }
         }
@@ -56,13 +56,7 @@ public class UserMenu : Book
         switch (userSelection)
         {
             case menuChoices.AddBook:
-                Console.WriteLine("What is the title of the new book?");
-                string? newTitle = Console.ReadLine();
-                Console.WriteLine("What is the author's name?");
-                string? newAuthor = Console.ReadLine();
-                books.Add(new Book(newTitle, newAuthor));
-                Console.WriteLine($"\nThe book {newTitle} has been added.\n");
-                UserMenu.DisplayMenu();
+                LibraryCatalog.AddBooks();
                 break;
             case menuChoices.CheckOutBook:
                 Book.CheckOut();
@@ -73,15 +67,12 @@ public class UserMenu : Book
                 UserMenu.DisplayMenu();
                 break;
             case menuChoices.ViewAvailableBooks:
-                Book.ListAvailableBooks();
+                LibraryCatalog.ListAvailableBooks();
                 UserMenu.DisplayMenu();
                 break;
             case menuChoices.ViewAllBooks:
-                Console.WriteLine($"--- All Books ---\n");
-                foreach (Book book in books)
-                {
-                    Console.WriteLine($"Title: {book.Title}; Author: {book.Author}; Checked Out: {book.IsCheckedOut}");
-                }
+                LibraryCatalog.ViewAllBooks();
+                UserMenu.DisplayMenu();
                 break;
             case menuChoices.Exit:
                 Console.WriteLine("\nYou are exiting the application.\n");
